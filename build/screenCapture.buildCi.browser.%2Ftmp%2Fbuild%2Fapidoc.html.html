@@ -1,0 +1,1065 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/megahertz/electron-log#readme">electron-log (v2.2.2)</a>
+</h1>
+<h4>Just a very simple logging module for your Electron application</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-log">module electron-log</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.debug">
+            function <span class="apidocSignatureSpan">electron-log.</span>debug
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.error">
+            function <span class="apidocSignatureSpan">electron-log.</span>error
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.info">
+            function <span class="apidocSignatureSpan">electron-log.</span>info
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.silly">
+            function <span class="apidocSignatureSpan">electron-log.</span>silly
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.transports.console">
+            function <span class="apidocSignatureSpan">electron-log.</span>transports.console
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.transports.file">
+            function <span class="apidocSignatureSpan">electron-log.</span>transports.file
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.transports.rendererConsole">
+            function <span class="apidocSignatureSpan">electron-log.</span>transports.rendererConsole
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.verbose">
+            function <span class="apidocSignatureSpan">electron-log.</span>verbose
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.warn">
+            function <span class="apidocSignatureSpan">electron-log.</span>warn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-log.</span>format</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-log.</span>main</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-log.</span>transports</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-log.format">module electron-log.format</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.format.format">
+            function <span class="apidocSignatureSpan">electron-log.</span>format
+            <span class="apidocSignatureSpan">(msg, formatter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.format.pad">
+            function <span class="apidocSignatureSpan">electron-log.format.</span>pad
+            <span class="apidocSignatureSpan">(number, zeros)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.format.stringifyArray">
+            function <span class="apidocSignatureSpan">electron-log.format.</span>stringifyArray
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-log.main">module electron-log.main</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.main.debug">
+            function <span class="apidocSignatureSpan">electron-log.main.</span>debug
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.main.error">
+            function <span class="apidocSignatureSpan">electron-log.main.</span>error
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.main.info">
+            function <span class="apidocSignatureSpan">electron-log.main.</span>info
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.main.silly">
+            function <span class="apidocSignatureSpan">electron-log.main.</span>silly
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.main.verbose">
+            function <span class="apidocSignatureSpan">electron-log.main.</span>verbose
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.main.warn">
+            function <span class="apidocSignatureSpan">electron-log.main.</span>warn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-log.main.</span>transports</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-log.transports">module electron-log.transports</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.transports.console">
+            function <span class="apidocSignatureSpan">electron-log.transports.</span>console
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.transports.file">
+            function <span class="apidocSignatureSpan">electron-log.transports.</span>file
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.transports.logS">
+            function <span class="apidocSignatureSpan">electron-log.transports.</span>logS
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.transports.rendererConsole">
+            function <span class="apidocSignatureSpan">electron-log.transports.</span>rendererConsole
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-log.transports.console">module electron-log.transports.console</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.transports.console.console">
+            function <span class="apidocSignatureSpan">electron-log.transports.</span>console
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.transports.console.format">
+            function <span class="apidocSignatureSpan">electron-log.transports.console.</span>format
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">electron-log.transports.console.</span>level</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-log.transports.file">module electron-log.transports.file</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.transports.file.file">
+            function <span class="apidocSignatureSpan">electron-log.transports.</span>file
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.transports.file.findLogPath">
+            function <span class="apidocSignatureSpan">electron-log.transports.file.</span>findLogPath
+            <span class="apidocSignatureSpan">(appName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.transports.file.format">
+            function <span class="apidocSignatureSpan">electron-log.transports.file.</span>format
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">electron-log.transports.file.</span>maxSize</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">electron-log.transports.file.</span>level</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-log.transports.rendererConsole">module electron-log.transports.rendererConsole</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">electron-log.transports.rendererConsole.</span>level</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.transports.rendererConsole.rendererConsole">
+            function <span class="apidocSignatureSpan">electron-log.transports.</span>rendererConsole
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-log.transports.rendererConsole.format">
+            function <span class="apidocSignatureSpan">electron-log.transports.rendererConsole.</span>format
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-log" id="apidoc.module.electron-log">module electron-log</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.debug" id="apidoc.element.electron-log.debug">
+        function <span class="apidocSignatureSpan">electron-log.</span>debug
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">debug = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.error" id="apidoc.element.electron-log.error">
+        function <span class="apidocSignatureSpan">electron-log.</span>error
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">error = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.info" id="apidoc.element.electron-log.info">
+        function <span class="apidocSignatureSpan">electron-log.</span>info
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">info = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+npm install electron-log
+
+## Usage
+
+```js
+var log = require('electron-log');
+
+log.<span class="apidocCodeKeywordSpan">info</span>('Hello, log');
+```
+### Log levels
+
+electron-log supports the following log levels:
+
+error, warn, info, verbose, debug, silly
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.silly" id="apidoc.element.electron-log.silly">
+        function <span class="apidocSignatureSpan">electron-log.</span>silly
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">silly = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.transports.console" id="apidoc.element.electron-log.transports.console">
+        function <span class="apidocSignatureSpan">electron-log.</span>transports.console
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transport(msg) {
+  var text = format.format(msg, transport.format);
+  if (console[msg.level]) {
+    console[msg.level](text);
+  } else {
+    console.log(text);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.transports.file" id="apidoc.element.electron-log.transports.file">
+        function <span class="apidocSignatureSpan">electron-log.</span>transports.file
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transport(msg) {
+  var text = format.format(msg, transport.format) + EOL;
+
+  if (transport.stream === undefined) {
+    initSteamConfig();
+    openStream();
+  }
+
+  if (transport.level === false) {
+    return;
+  }
+
+  var needLogRotation = transport.maxSize &gt; 0 &amp;&amp;
+    getStreamSize(transport.stream) &gt; transport.maxSize;
+
+  if (needLogRotation) {
+    archiveLog(transport.stream);
+    openStream();
+  }
+
+  transport.stream.write(text);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.transports.rendererConsole" id="apidoc.element.electron-log.transports.rendererConsole">
+        function <span class="apidocSignatureSpan">electron-log.</span>transports.rendererConsole
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transport(msg) {
+  if (!BrowserWindow) return;
+
+  var text = format.format(msg, transport.format);
+  BrowserWindow.getAllWindows().forEach(function(wnd) {
+    wnd.webContents.send('__ELECTRON_LOG_RENDERER__', msg.level, text);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.verbose" id="apidoc.element.electron-log.verbose">
+        function <span class="apidocSignatureSpan">electron-log.</span>verbose
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">verbose = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.warn" id="apidoc.element.electron-log.warn">
+        function <span class="apidocSignatureSpan">electron-log.</span>warn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">warn = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-log.format" id="apidoc.module.electron-log.format">module electron-log.format</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.format.format" id="apidoc.element.electron-log.format.format">
+        function <span class="apidocSignatureSpan">electron-log.</span>format
+        <span class="apidocSignatureSpan">(msg, formatter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function format(msg, formatter) {
+  if (typeof formatter === 'function') {
+    return formatter(msg);
+  }
+
+  var date = msg.date;
+
+  return formatter
+    .replace('{level}', msg.level)
+    .replace('{text}', stringifyArray(msg.data))
+    .replace('{y}', date.getFullYear())
+    .replace('{m}', pad(date.getMonth() + 1))
+    .replace('{d}', pad(date.getDate()))
+    .replace('{h}', pad(date.getHours()))
+    .replace('{i}', pad(date.getMinutes()))
+    .replace('{s}', pad(date.getSeconds()))
+    .replace('{ms}', pad(date.getMilliseconds(), 4));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.format.pad" id="apidoc.element.electron-log.format.pad">
+        function <span class="apidocSignatureSpan">electron-log.format.</span>pad
+        <span class="apidocSignatureSpan">(number, zeros)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pad(number, zeros) {
+  zeros = zeros || 2;
+  return (new Array(zeros + 1).join('0') + number).substr(-zeros, zeros);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.format.stringifyArray" id="apidoc.element.electron-log.format.stringifyArray">
+        function <span class="apidocSignatureSpan">electron-log.format.</span>stringifyArray
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stringifyArray(data) {
+  data = data.map(function formatErrors(arg) {
+    return arg instanceof Error ? arg.stack + EOL : arg;
+  });
+  return util.format.apply(util, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-log.main" id="apidoc.module.electron-log.main">module electron-log.main</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.main.debug" id="apidoc.element.electron-log.main.debug">
+        function <span class="apidocSignatureSpan">electron-log.main.</span>debug
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">debug = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.main.error" id="apidoc.element.electron-log.main.error">
+        function <span class="apidocSignatureSpan">electron-log.main.</span>error
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">error = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.main.info" id="apidoc.element.electron-log.main.info">
+        function <span class="apidocSignatureSpan">electron-log.main.</span>info
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">info = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+npm install electron-log
+
+## Usage
+
+```js
+var log = require('electron-log');
+
+log.<span class="apidocCodeKeywordSpan">info</span>('Hello, log');
+```
+### Log levels
+
+electron-log supports the following log levels:
+
+error, warn, info, verbose, debug, silly
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.main.silly" id="apidoc.element.electron-log.main.silly">
+        function <span class="apidocSignatureSpan">electron-log.main.</span>silly
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">silly = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.main.verbose" id="apidoc.element.electron-log.main.verbose">
+        function <span class="apidocSignatureSpan">electron-log.main.</span>verbose
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">verbose = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.main.warn" id="apidoc.element.electron-log.main.warn">
+        function <span class="apidocSignatureSpan">electron-log.main.</span>warn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">warn = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-log.transports" id="apidoc.module.electron-log.transports">module electron-log.transports</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.transports.console" id="apidoc.element.electron-log.transports.console">
+        function <span class="apidocSignatureSpan">electron-log.transports.</span>console
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transport(msg) {
+  var text = format.format(msg, transport.format);
+  if (console[msg.level]) {
+    console[msg.level](text);
+  } else {
+    console.log(text);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.transports.file" id="apidoc.element.electron-log.transports.file">
+        function <span class="apidocSignatureSpan">electron-log.transports.</span>file
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transport(msg) {
+  var text = format.format(msg, transport.format) + EOL;
+
+  if (transport.stream === undefined) {
+    initSteamConfig();
+    openStream();
+  }
+
+  if (transport.level === false) {
+    return;
+  }
+
+  var needLogRotation = transport.maxSize &gt; 0 &amp;&amp;
+    getStreamSize(transport.stream) &gt; transport.maxSize;
+
+  if (needLogRotation) {
+    archiveLog(transport.stream);
+    openStream();
+  }
+
+  transport.stream.write(text);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.transports.logS" id="apidoc.element.electron-log.transports.logS">
+        function <span class="apidocSignatureSpan">electron-log.transports.</span>logS
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transport(msg) {
+  if (!transport.url) return;
+
+  var data = jsonDepth({
+    client: transport.client,
+    data: msg.data,
+    date: msg.date.getTime(),
+    level: msg.level
+  }, transport.depth + 1);
+
+  post(transport.url, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.transports.rendererConsole" id="apidoc.element.electron-log.transports.rendererConsole">
+        function <span class="apidocSignatureSpan">electron-log.transports.</span>rendererConsole
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transport(msg) {
+  if (!BrowserWindow) return;
+
+  var text = format.format(msg, transport.format);
+  BrowserWindow.getAllWindows().forEach(function(wnd) {
+    wnd.webContents.send('__ELECTRON_LOG_RENDERER__', msg.level, text);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-log.transports.console" id="apidoc.module.electron-log.transports.console">module electron-log.transports.console</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.transports.console.console" id="apidoc.element.electron-log.transports.console.console">
+        function <span class="apidocSignatureSpan">electron-log.transports.</span>console
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transport(msg) {
+  var text = format.format(msg, transport.format);
+  if (console[msg.level]) {
+    console[msg.level](text);
+  } else {
+    console.log(text);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.transports.console.format" id="apidoc.element.electron-log.transports.console.format">
+        function <span class="apidocSignatureSpan">electron-log.transports.console.</span>format
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function formatFn(msg) {
+  var time =
+    format.pad(msg.date.getHours()) + ':' +
+    format.pad(msg.date.getMinutes()) + ':' +
+    format.pad(msg.date.getSeconds()) + ':' +
+    format.pad(msg.date.getMilliseconds(), 4);
+
+  return '[' + time + '] [' + msg.level + '] ' +
+    format.stringifyArray(msg.data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-log.transports.file" id="apidoc.module.electron-log.transports.file">module electron-log.transports.file</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.transports.file.file" id="apidoc.element.electron-log.transports.file.file">
+        function <span class="apidocSignatureSpan">electron-log.transports.</span>file
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transport(msg) {
+  var text = format.format(msg, transport.format) + EOL;
+
+  if (transport.stream === undefined) {
+    initSteamConfig();
+    openStream();
+  }
+
+  if (transport.level === false) {
+    return;
+  }
+
+  var needLogRotation = transport.maxSize &gt; 0 &amp;&amp;
+    getStreamSize(transport.stream) &gt; transport.maxSize;
+
+  if (needLogRotation) {
+    archiveLog(transport.stream);
+    openStream();
+  }
+
+  transport.stream.write(text);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.transports.file.findLogPath" id="apidoc.element.electron-log.transports.file.findLogPath">
+        function <span class="apidocSignatureSpan">electron-log.transports.file.</span>findLogPath
+        <span class="apidocSignatureSpan">(appName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findLogPath(appName) {
+  appName = appName || getAppName();
+  if (!appName) {
+    return false;
+  }
+
+  var dir;
+  switch (process.platform) {
+    case 'linux': {
+      dir = prepareDir(process.env['XDG_CONFIG_HOME'], appName)
+        .or(process.env['HOME'], '.config', appName)
+        .or(process.env['XDG_DATA_HOME'], appName)
+        .or(process.env['HOME'], '.local', 'share', appName)
+        .result;
+      break;
+    }
+
+    case 'darwin': {
+      dir = prepareDir(process.env['HOME'], 'Library', 'Logs', appName)
+        .or(process.env['HOME'], 'Library', 'Application Support', appName)
+        .result;
+      break;
+    }
+
+    case 'win32': {
+      dir = prepareDir(process.env['APPDATA'], appName)
+        .or(process.env['USERPROFILE'], 'AppData', 'Roaming', appName)
+        .result;
+      break;
+    }
+  }
+
+  if (dir) {
+    return path.join(dir, 'log.log');
+  } else {
+    return false;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.transports.file.format" id="apidoc.element.electron-log.transports.file.format">
+        function <span class="apidocSignatureSpan">electron-log.transports.file.</span>format
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function formatFn(msg) {
+  var date =
+    msg.date.getFullYear() + '-' +
+    format.pad(msg.date.getMonth() + 1) + '-' +
+    format.pad(msg.date.getDate()) + ' ' +
+    format.pad(msg.date.getHours()) + ':' +
+    format.pad(msg.date.getMinutes()) + ':' +
+    format.pad(msg.date.getSeconds()) + ':' +
+    format.pad(msg.date.getMilliseconds(), 4);
+
+  return '[' + date + '] [' + msg.level + '] ' +
+    format.stringifyArray(msg.data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-log.transports.rendererConsole" id="apidoc.module.electron-log.transports.rendererConsole">module electron-log.transports.rendererConsole</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.transports.rendererConsole.rendererConsole" id="apidoc.element.electron-log.transports.rendererConsole.rendererConsole">
+        function <span class="apidocSignatureSpan">electron-log.transports.</span>rendererConsole
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transport(msg) {
+  if (!BrowserWindow) return;
+
+  var text = format.format(msg, transport.format);
+  BrowserWindow.getAllWindows().forEach(function(wnd) {
+    wnd.webContents.send('__ELECTRON_LOG_RENDERER__', msg.level, text);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-log.transports.rendererConsole.format" id="apidoc.element.electron-log.transports.rendererConsole.format">
+        function <span class="apidocSignatureSpan">electron-log.transports.rendererConsole.</span>format
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function formatFn(msg) {
+  var time =
+        format.pad(msg.date.getHours()) + ':' +
+        format.pad(msg.date.getMinutes()) + ':' +
+        format.pad(msg.date.getSeconds()) + ':' +
+        format.pad(msg.date.getMilliseconds(), 4);
+
+  return '[' + time + '] ' + format.stringifyArray(msg.data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
